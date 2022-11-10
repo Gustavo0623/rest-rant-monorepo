@@ -24,7 +24,6 @@ router.post('/', async (req, res) => {
 router.get('/profile', async (req, res) => {
     try {
         const [authenticationMethod, token] = req.headers.authorization.split(' ')
-        console.log(authenticationMethod)
         // Only handle "Bearer" authorization for now 
         //  (we could add other authorization strategies later):
         if (authenticationMethod == 'Bearer') {
